@@ -4,19 +4,19 @@ const works = [
   {
     name: "Articles",
     description: "Works description",
-    imgUrl: "images/articles.jpg",
+    imgUrl: "/images/articles.jpg",
     href: "/work/article",
   },
   {
     name: "Social Media",
     description: "Works description",
-    imgUrl: "images/social-media-copies.jpg",
+    imgUrl: "/images/social-media-copies.jpg",
     href: "/work/social-media",
   },
   {
     name: "Campaigns",
     description: "Works description",
-    imgUrl: "images/fundraising-campaigns.jpg",
+    imgUrl: "/images/fundraising-campaigns.jpg",
     href: "/work/campaign",
   },
 ];

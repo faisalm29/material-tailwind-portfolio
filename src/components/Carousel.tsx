@@ -1,4 +1,5 @@
 import { Carousel } from "@material-tailwind/react";
+import Image from "next/image";
 
 type ImagesProps = {
   url: string;
@@ -13,11 +14,14 @@ const CarouselDefault = ({
   return (
     <Carousel className="rounded-xl">
       {images.map((image, id) => (
-        <img
+        <Image
           key={id}
           src={image.url}
           alt={image.alt}
-          className="h-full w-full object-cover"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
         />
       ))}
     </Carousel>

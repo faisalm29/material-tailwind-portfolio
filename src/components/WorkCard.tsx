@@ -7,6 +7,7 @@ import {
   Button,
 } from "@material-tailwind/react";
 import Link from "next/link";
+import Image from "next/image";
 
 type WorkCardProps = {
   name: string;
@@ -29,7 +30,14 @@ const WorkCard = ({
         color="transparent"
         className="m-0 rounded-none"
       >
-        <img src={imageUrl} alt={name} />
+        <Image
+          src={imageUrl}
+          alt={name}
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
+        />
       </CardHeader>
       <CardBody>
         <Typography variant="h4" color="blue-gray" className="mb-3">

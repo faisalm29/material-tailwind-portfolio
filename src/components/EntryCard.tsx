@@ -9,6 +9,7 @@ import {
 import Link from "next/link";
 
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 type WorkCardProps = {
   title: string;
@@ -33,7 +34,14 @@ const WorkCard = ({
         color="transparent"
         className="m-0 rounded-none"
       >
-        <img src={thumbnailUrl} alt={title} />
+        <Image
+          src={thumbnailUrl}
+          alt={title}
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
+        />
       </CardHeader>
       <CardBody>
         <Typography variant="h4" color="blue-gray" className="mb-3">
