@@ -27,7 +27,7 @@ const WorkCard = ({
   const router = useRouter();
   const currentRoute = router.pathname;
   return (
-    <Card className="md:max-w-[24rem] overflow-hidden mb-6 md:mb-0">
+    <Card className="mb-6 overflow-hidden md:mb-0 md:max-w-[24rem]">
       <CardHeader
         floated={false}
         shadow={false}

@@ -2,9 +2,9 @@ import { Avatar, Button, Typography } from "@material-tailwind/react";
 
 const ProfileSection = (): JSX.Element => {
   return (
-    <section className="max-w-[960px] px-4 mx-auto mb-16">
+    <section className="mx-auto mb-16 max-w-[960px] px-4">
       {/* Avatar */}
-      <div className="flex justify-center items-center mb-2">
+      <div className="mb-2 flex items-center justify-center">
         <Avatar
           src="/images/profile-picture.png"
           alt="faisal muhammad's portrait"
@@ -20,7 +20,7 @@ const ProfileSection = (): JSX.Element => {
         ullam quod sint minus asperiores laborum aut optio quis nisi quae
         dignissimos!
       </Typography>
-      <div className="flex justify-center items-center">
+      <div className="flex items-center justify-center">
         <Button variant="filled" size="md">
           Contact me
         </Button>

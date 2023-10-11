@@ -14,7 +14,7 @@ const links = [
 
 const NavList = (): JSX.Element => {
   return (
-    <ul className="flex flex-col my-2 gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       {links.map((link, id) => (
         <Typography
           as="li"
@@ -25,7 +25,7 @@ const NavList = (): JSX.Element => {
         >
           <Link
             href={link.route}
-            className="flex items-center hover:text-blue-500 transition-colors"
+            className="flex items-center transition-colors hover:text-blue-500"
           >
             {link.label}
           </Link>

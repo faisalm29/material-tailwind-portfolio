@@ -7,7 +7,7 @@ const SocialMediaGallery = ({
   socialMedias: SocialMedia[];
 }): JSX.Element => {
   return (
-    <section className="md:flex md:justify-center md:items-start md:gap-6 px-4 mb-16">
+    <section className="mb-16 px-4 md:flex md:items-start md:justify-center md:gap-6">
       {socialMedias.map((socialMedia, id) => (
         <EntryCard
           key={id}

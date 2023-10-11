@@ -14,8 +14,8 @@ const ArticleEntry: NextPage<
   const Component = useMDXComponent(article.body.code);
 
   return (
-    <main className="max-w-[960px] px-4 mx-auto mb-16">
-      <div className="flex justify-center items-center mb-4">
+    <main className="mx-auto mb-16 max-w-[960px] px-4">
+      <div className="mb-4 flex items-center justify-center">
         <Breadcrumbs>
           <Link href="/" className="opacity-60">
             <svg
@@ -34,7 +34,7 @@ const ArticleEntry: NextPage<
         </Breadcrumbs>
       </div>
 
-      <Typography variant="h1" className="text-center mb-6">
+      <Typography variant="h1" className="mb-6 text-center">
         {article.title}
       </Typography>
 
@@ -76,7 +76,7 @@ export const getStaticProps = async ({
   params: { slug: string };
 }) => {
   const article = allArticles.find(
-    (article) => article.slug === (params?.slug as string)
+    (article) => article.slug === (params?.slug as string),
   );
 
   if (!article) {

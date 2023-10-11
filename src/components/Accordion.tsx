@@ -22,7 +22,7 @@ const AccordionAllOpen = ({
     <>
       <Accordion
         open={openAcc}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2 md:mb-0"
+        className="mb-2 rounded-lg border border-blue-gray-100 px-4 md:mb-0"
       >
         <AccordionHeader
           onClick={handleOpenAcc}

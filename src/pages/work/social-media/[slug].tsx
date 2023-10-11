@@ -9,8 +9,8 @@ const SocialMediaEntry: NextPage<
 > = ({ socialMedia }): JSX.Element => {
   return (
     <main>
-      <div className="max-w-[960px] px-4 mx-auto mb-6">
-        <div className="flex justify-center items-center mb-4">
+      <div className="mx-auto mb-6 max-w-[960px] px-4">
+        <div className="mb-4 flex items-center justify-center">
           <Breadcrumbs>
             <Link href="/" className="opacity-60">
               <svg
@@ -29,12 +29,12 @@ const SocialMediaEntry: NextPage<
           </Breadcrumbs>
         </div>
 
-        <Typography variant="h1" className="text-center mb-6">
+        <Typography variant="h1" className="mb-6 text-center">
           {socialMedia.title}
         </Typography>
       </div>
 
-      <div className="max-w-[480px] px-4 mx-auto mb-16">
+      <div className="mx-auto mb-16 max-w-[480px] px-4">
         <CarouselDefault images={socialMedia.images} />
       </div>
     </main>
@@ -58,7 +58,7 @@ export const getStaticProps = async ({
   params: { slug: string };
 }) => {
   const socialMedia = allSocialMedia.find(
-    (socialMedia) => socialMedia.slug === (params?.slug as string)
+    (socialMedia) => socialMedia.slug === (params?.slug as string),
   );
 
   if (!socialMedia) {

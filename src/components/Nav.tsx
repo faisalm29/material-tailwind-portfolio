@@ -19,9 +19,9 @@ const Nav = (): JSX.Element => {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen px-4 py-3 rounded-none sticky top-0 z-10 mb-16">
-      <div className="max-w-[960px] mx-auto">
-        <div className="text-blue-gray-900 flex items-center justify-between">
+    <Navbar className="max-w-screen sticky top-0 z-10 mx-auto mb-16 rounded-none px-4 py-3">
+      <div className="mx-auto max-w-[960px]">
+        <div className="flex items-center justify-between text-blue-gray-900">
           <div className="hidden lg:block">
             <NavList />
           </div>

@@ -3,7 +3,7 @@ import type { Article } from "contentlayer/generated";
 
 const ArticleGallery = ({ articles }: { articles: Article[] }): JSX.Element => {
   return (
-    <section className="md:flex md:justify-center md:items-start md:gap-6 px-4 mb-16">
+    <section className="mb-16 px-4 md:flex md:items-start md:justify-center md:gap-6">
       {articles.map((article, id) => (
         <EntryCard
           key={id}

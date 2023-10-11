@@ -13,8 +13,8 @@ const CampaignEntry: NextPage<
   const Component = useMDXComponent(campaign.body.code);
 
   return (
-    <main className="max-w-[960px] px-4 mx-auto mb-16">
-      <div className="flex justify-center items-center mb-4">
+    <main className="mx-auto mb-16 max-w-[960px] px-4">
+      <div className="mb-4 flex items-center justify-center">
         <Breadcrumbs>
           <Link href="/" className="opacity-60">
             <svg
@@ -33,7 +33,7 @@ const CampaignEntry: NextPage<
         </Breadcrumbs>
       </div>
 
-      <Typography variant="h1" className="text-center mb-6">
+      <Typography variant="h1" className="mb-6 text-center">
         {campaign.title}
       </Typography>
 
@@ -50,7 +50,7 @@ const CampaignEntry: NextPage<
         />
       </div>
 
-      <article className="prose post-wrapper mx-auto">
+      <article className="post-wrapper prose mx-auto">
         <Component />
       </article>
     </main>
@@ -74,7 +74,7 @@ export const getStaticProps = async ({
   params: { slug: string };
 }) => {
   const campaign = allCampaigns.find(
-    (campaign) => campaign.slug === (params?.slug as string)
+    (campaign) => campaign.slug === (params?.slug as string),
   );
 
   if (!campaign) {

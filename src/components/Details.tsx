@@ -7,7 +7,7 @@ type Detail = {
 
 const Details = ({ details }: { details: Detail[] }): JSX.Element => {
   return (
-    <div className="md:flex md:justify-center md:items-start md:gap-4 mb-6">
+    <div className="mb-6 md:flex md:items-start md:justify-center md:gap-4">
       {details.map((detail, id) => (
         <AccordionAllOpen
           key={id}
