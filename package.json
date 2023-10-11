@@ -12,7 +12,7 @@
     "@heroicons/react": "^2.0.18",
     "@material-tailwind/react": "^2.1.2",
     "contentlayer": "^0.3.4",
-    "next": "13.5.4",
+    "next": "^13.5.3",
     "next-contentlayer": "^0.3.4",
     "prettier-plugin-tailwindcss": "^0.5.5",
     "react": "^18",
