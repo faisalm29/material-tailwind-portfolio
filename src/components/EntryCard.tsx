@@ -18,7 +18,7 @@ type WorkCardProps = {
   slug: string;
 };
 
-const WorkCard = ({
+const EntryCard = ({
   title,
   excerpt,
   thumbnailUrl,
@@ -58,4 +58,4 @@ const WorkCard = ({
   );
 };
 
-export default WorkCard;
+export default EntryCard;

@@ -1,4 +1,4 @@
-import AccordionAllOpen from "./Accordion";
+import AccordionAllOpen from "./AccordionAllOpen";
 
 type Detail = {
   label: string;

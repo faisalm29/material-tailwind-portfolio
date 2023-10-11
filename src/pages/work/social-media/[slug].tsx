@@ -1,7 +1,7 @@
 import { allSocialMedia } from "contentlayer/generated";
 import { InferGetStaticPropsType, NextPage } from "next";
 import { Breadcrumbs, Typography } from "@material-tailwind/react";
-import CarouselDefault from "@/components/Carousel";
+import CarouselDefault from "@/components/CarouselDefault";
 import Link from "next/link";
 
 const SocialMediaEntry: NextPage<
