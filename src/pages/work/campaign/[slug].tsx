@@ -1,7 +1,7 @@
 import { allCampaigns } from "contentlayer/generated";
 import { InferGetStaticPropsType, NextPage } from "next";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs, Typography } from "@material-tailwind/react";
 
@@ -40,13 +40,22 @@ const CampaignEntry: NextPage<
         <div className="mb-6">
           <Image
             src={campaign.thumbnail}
+            alt={`${campaign.title} thumbnail`}
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+            className="rounded-lg"
+          />
+          {/* <Image
+            src={campaign.thumbnail}
             width={2000}
             height={1000}
             layout="responsive"
             objectFit="cover"
             alt={`${campaign.title} thumbnail`}
             className="rounded-lg"
-          />
+          /> */}
         </div>
 
         <article className="post-wrapper prose mx-auto">

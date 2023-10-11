@@ -1,7 +1,7 @@
 import { allArticles } from "contentlayer/generated";
 import { InferGetStaticPropsType, NextPage } from "next";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import Details from "@/components/Details";
 import { Typography, Breadcrumbs } from "@material-tailwind/react";
@@ -43,11 +43,11 @@ const ArticleEntry: NextPage<
         <div className="mb-6">
           <Image
             src={article.thumbnail}
-            width={2000}
-            height={1000}
-            layout="responsive"
-            objectFit="cover"
             alt={`${article.title} thumbnail`}
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
             className="rounded-lg"
           />
         </div>
