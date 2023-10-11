@@ -1,3 +1,6 @@
+import { useRouter } from "next/router";
+import Link from "next/link";
+import Image from "next/image";
 import {
   Card,
   CardHeader,
@@ -6,12 +9,8 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
-import Link from "next/link";
 
-import { useRouter } from "next/router";
-import Image from "next/image";
-
-type WorkCardProps = {
+type EntryCardProps = {
   title: string;
   excerpt: string;
   thumbnailUrl: string;
@@ -23,7 +22,7 @@ const EntryCard = ({
   excerpt,
   thumbnailUrl,
   slug,
-}: WorkCardProps): JSX.Element => {
+}: EntryCardProps): JSX.Element => {
   const router = useRouter();
   const currentRoute = router.pathname;
   return (

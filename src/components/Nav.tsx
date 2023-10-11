@@ -1,7 +1,7 @@
-import { Navbar, Collapse, Button, IconButton } from "@material-tailwind/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import NavList from "./NavList";
 import { useState, useEffect } from "react";
+import { Navbar, Collapse, Button, IconButton } from "@material-tailwind/react";
+import NavList from "./NavList";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const Nav = (): JSX.Element => {
   const [openNav, setOpenNav] = useState(false);

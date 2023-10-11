@@ -5,11 +5,7 @@ import SocialMediaGallery from "@/components/SocialMediaGallery";
 const SocialMediaEntriesPage: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
 > = ({ socialMedias }): JSX.Element => {
-  return (
-    <main>
-      <SocialMediaGallery socialMedias={socialMedias} />
-    </main>
-  );
+  return <SocialMediaGallery socialMedias={socialMedias} />;
 };
 
 export const getStaticProps = async () => {

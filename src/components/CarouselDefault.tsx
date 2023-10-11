@@ -1,5 +1,5 @@
-import { Carousel } from "@material-tailwind/react";
 import Image from "next/image";
+import { Carousel } from "@material-tailwind/react";
 
 type ImagesProps = {
   url: string;

@@ -1,5 +1,5 @@
-import EntryCard from "./EntryCard";
 import type { Campaign } from "contentlayer/generated";
+import EntryCard from "./EntryCard";
 
 const CampaignGallery = ({
   campaigns,
@@ -7,7 +7,7 @@ const CampaignGallery = ({
   campaigns: Campaign[];
 }): JSX.Element => {
   return (
-    <section className="mb-16 px-4 md:flex md:items-start md:justify-center md:gap-6">
+    <div className="mb-16 px-4 md:flex md:items-start md:justify-center md:gap-6">
       {campaigns.map((campaign, id) => (
         <EntryCard
           key={id}
@@ -17,7 +17,7 @@ const CampaignGallery = ({
           slug={campaign.slug}
         />
       ))}
-    </section>
+    </div>
   );
 };
 

@@ -1,11 +1,11 @@
-import React from "react";
+import { useState } from "react";
 import {
   Accordion,
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
 
-type AccordionProps = {
+type AccordionAllOpenProps = {
   label: string;
   description: string;
 };
@@ -13,30 +13,28 @@ type AccordionProps = {
 const AccordionAllOpen = ({
   label,
   description,
-}: AccordionProps): JSX.Element => {
-  const [openAcc, setOpenAcc] = React.useState(false);
+}: AccordionAllOpenProps): JSX.Element => {
+  const [openAcc, setOpenAcc] = useState(false);
 
-  const handleOpenAcc = () => setOpenAcc((cur) => !cur);
+  const handleOpenAcc = () => setOpenAcc((current) => !current);
 
   return (
-    <>
-      <Accordion
-        open={openAcc}
-        className="mb-2 rounded-lg border border-blue-gray-100 px-4 md:mb-0"
+    <Accordion
+      open={openAcc}
+      className="mb-2 rounded-lg border border-blue-gray-100 px-4 md:mb-0"
+    >
+      <AccordionHeader
+        onClick={handleOpenAcc}
+        className={`border-b-0 transition-colors ${
+          openAcc ? "text-blue-500 hover:!text-blue-700" : ""
+        }`}
       >
-        <AccordionHeader
-          onClick={handleOpenAcc}
-          className={`border-b-0 transition-colors ${
-            openAcc ? "text-blue-500 hover:!text-blue-700" : ""
-          }`}
-        >
-          {label}
-        </AccordionHeader>
-        <AccordionBody className="pt-0 text-base font-normal">
-          {description}
-        </AccordionBody>
-      </Accordion>
-    </>
+        {label}
+      </AccordionHeader>
+      <AccordionBody className="pt-0 text-base font-normal">
+        {description}
+      </AccordionBody>
+    </Accordion>
   );
 };
 

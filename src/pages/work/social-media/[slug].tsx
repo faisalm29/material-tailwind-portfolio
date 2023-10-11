@@ -1,14 +1,14 @@
 import { allSocialMedia } from "contentlayer/generated";
 import { InferGetStaticPropsType, NextPage } from "next";
-import { Breadcrumbs, Typography } from "@material-tailwind/react";
-import CarouselDefault from "@/components/CarouselDefault";
 import Link from "next/link";
+import CarouselDefault from "@/components/CarouselDefault";
+import { Breadcrumbs, Typography } from "@material-tailwind/react";
 
 const SocialMediaEntry: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
 > = ({ socialMedia }): JSX.Element => {
   return (
-    <main>
+    <>
       <div className="mx-auto mb-6 max-w-[960px] px-4">
         <div className="mb-4 flex items-center justify-center">
           <Breadcrumbs>
@@ -37,7 +37,7 @@ const SocialMediaEntry: NextPage<
       <div className="mx-auto mb-16 max-w-[480px] px-4">
         <CarouselDefault images={socialMedia.images} />
       </div>
-    </main>
+    </>
   );
 };
 

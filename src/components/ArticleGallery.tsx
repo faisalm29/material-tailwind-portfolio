@@ -1,9 +1,9 @@
-import EntryCard from "./EntryCard";
 import type { Article } from "contentlayer/generated";
+import EntryCard from "./EntryCard";
 
 const ArticleGallery = ({ articles }: { articles: Article[] }): JSX.Element => {
   return (
-    <section className="mb-16 px-4 md:flex md:items-start md:justify-center md:gap-6">
+    <div className="mb-16 px-4 md:flex md:items-start md:justify-center md:gap-6">
       {articles.map((article, id) => (
         <EntryCard
           key={id}
@@ -13,7 +13,7 @@ const ArticleGallery = ({ articles }: { articles: Article[] }): JSX.Element => {
           slug={article.slug}
         />
       ))}
-    </section>
+    </div>
   );
 };
 

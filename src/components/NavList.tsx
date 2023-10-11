@@ -1,5 +1,5 @@
-import { Typography } from "@material-tailwind/react";
 import Link from "next/link";
+import { Typography } from "@material-tailwind/react";
 
 const links = [
   {

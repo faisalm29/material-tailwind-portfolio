@@ -1,12 +1,10 @@
 import { allArticles } from "contentlayer/generated";
 import { InferGetStaticPropsType, NextPage } from "next";
-
 import { useMDXComponent } from "next-contentlayer/hooks";
-
-import { Typography, Breadcrumbs } from "@material-tailwind/react";
-import Details from "@/components/Details";
 import Image from "next/legacy/image";
 import Link from "next/link";
+import Details from "@/components/Details";
+import { Typography, Breadcrumbs } from "@material-tailwind/react";
 
 const ArticleEntry: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
@@ -14,48 +12,50 @@ const ArticleEntry: NextPage<
   const Component = useMDXComponent(article.body.code);
 
   return (
-    <main className="mx-auto mb-16 max-w-[960px] px-4">
-      <div className="mb-4 flex items-center justify-center">
-        <Breadcrumbs>
-          <Link href="/" className="opacity-60">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-            </svg>
-          </Link>
-          <Link href="/work" className="opacity-60">
-            <span>Work</span>
-          </Link>
-          <Link href="/work/article">Article</Link>
-        </Breadcrumbs>
+    <>
+      <div className="mx-auto mb-16 max-w-[960px] px-4">
+        <div className="mb-4 flex items-center justify-center">
+          <Breadcrumbs>
+            <Link href="/" className="opacity-60">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+              </svg>
+            </Link>
+            <Link href="/work" className="opacity-60">
+              <span>Work</span>
+            </Link>
+            <Link href="/work/article">Article</Link>
+          </Breadcrumbs>
+        </div>
+
+        <Typography variant="h1" className="mb-6 text-center">
+          {article.title}
+        </Typography>
+
+        <Details details={article.details} />
+
+        {/* Image goes here */}
+        <div className="mb-6">
+          <Image
+            src={article.thumbnail}
+            width={2000}
+            height={1000}
+            layout="responsive"
+            objectFit="cover"
+            alt={`${article.title} thumbnail`}
+            className="rounded-lg"
+          />
+        </div>
+        <article className="prose mx-auto">
+          <Component />
+        </article>
       </div>
-
-      <Typography variant="h1" className="mb-6 text-center">
-        {article.title}
-      </Typography>
-
-      <Details details={article.details} />
-
-      {/* Image goes here */}
-      <div className="mb-6">
-        <Image
-          src={article.thumbnail}
-          width={2000}
-          height={1000}
-          layout="responsive"
-          objectFit="cover"
-          alt={`${article.title} thumbnail`}
-          className="rounded-lg"
-        />
-      </div>
-      <article className="prose mx-auto">
-        <Component />
-      </article>
-    </main>
+    </>
   );
 };
 

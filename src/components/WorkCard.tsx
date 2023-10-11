@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Image from "next/image";
 import {
   Card,
   CardHeader,
@@ -6,8 +8,6 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
-import Link from "next/link";
-import Image from "next/image";
 
 type WorkCardProps = {
   name: string;
