@@ -4,9 +4,7 @@ import Link from "next/link";
 import CarouselDefault from "@/components/CarouselDefault";
 import { Breadcrumbs, Typography } from "@material-tailwind/react";
 
-const SocialMediaEntry: NextPage<
-  InferGetStaticPropsType<typeof getStaticProps>
-> = ({ socialMedia }): JSX.Element => {
+const SocialMediaEntry = ({}): JSX.Element => {
   return (
     <>
       <div className="mx-auto mb-6 max-w-[960px] px-4">
@@ -30,48 +28,50 @@ const SocialMediaEntry: NextPage<
         </div>
 
         <Typography variant="h1" className="mb-6 text-center">
-          {socialMedia.title}
+          {/* {socialMedia.title} */}
+          Title
         </Typography>
       </div>
 
       <div className="mx-auto mb-16 max-w-[480px] px-4">
-        <CarouselDefault images={socialMedia.images} />
+        {/* <CarouselDefault images={socialMedia.images} /> */}
+        Carousel goes here
       </div>
     </>
   );
 };
 
-export const getStaticPaths = async () => {
-  return {
-    paths: allSocialMedia.map((socialMedia) => ({
-      params: {
-        slug: socialMedia.slug,
-      },
-    })),
-    fallback: false,
-  };
-};
+// export const getStaticPaths = async () => {
+//   return {
+//     paths: allSocialMedia.map((socialMedia) => ({
+//       params: {
+//         slug: socialMedia.slug,
+//       },
+//     })),
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps = async ({
-  params,
-}: {
-  params: { slug: string };
-}) => {
-  const socialMedia = allSocialMedia.find(
-    (socialMedia) => socialMedia.slug === (params?.slug as string),
-  );
+// export const getStaticProps = async ({
+//   params,
+// }: {
+//   params: { slug: string };
+// }) => {
+//   const socialMedia = allSocialMedia.find(
+//     (socialMedia) => socialMedia.slug === (params?.slug as string),
+//   );
 
-  if (!socialMedia) {
-    return {
-      notFound: true,
-    };
-  }
+//   if (!socialMedia) {
+//     return {
+//       notFound: true,
+//     };
+//   }
 
-  return {
-    props: {
-      socialMedia,
-    },
-  };
-};
+//   return {
+//     props: {
+//       socialMedia,
+//     },
+//   };
+// };
 
 export default SocialMediaEntry;

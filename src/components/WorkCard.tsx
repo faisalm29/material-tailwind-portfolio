@@ -16,12 +16,7 @@ type WorkCardProps = {
   href: string;
 };
 
-const WorkCard = ({
-  name,
-  description,
-  imageUrl,
-  href,
-}: WorkCardProps): JSX.Element => {
+const WorkCard = (): JSX.Element => {
   return (
     <Card className="mb-6 overflow-hidden md:mb-0 md:max-w-[24rem]">
       <CardHeader
@@ -30,23 +25,24 @@ const WorkCard = ({
         color="transparent"
         className="m-0 rounded-none"
       >
-        <Image
+        {/* <Image
           src={imageUrl}
           alt={name}
           width={0}
           height={0}
           sizes="100vw"
           style={{ width: "100%", height: "auto" }}
-        />
+        /> */}
       </CardHeader>
       <CardBody>
         <Typography variant="h4" color="blue-gray" className="mb-3">
-          {name}
+          {/* {name} */}
+          name
         </Typography>
-        <Typography>{description}</Typography>
+        <Typography>description</Typography>
       </CardBody>
       <CardFooter className="pt-0">
-        <Link href={href}>
+        <Link href="#">
           <Button>Read More</Button>
         </Link>
       </CardFooter>

@@ -8,7 +8,7 @@ const CampaignGallery = ({
 }): JSX.Element => {
   return (
     <div className="mb-16 px-4 md:flex md:items-start md:justify-center md:gap-6">
-      {campaigns.map((campaign, id) => (
+      {/* {campaigns.map((campaign, id) => (
         <EntryCard
           key={id}
           title={campaign.title}
@@ -16,7 +16,7 @@ const CampaignGallery = ({
           thumbnailUrl={campaign.thumbnail}
           slug={campaign.slug}
         />
-      ))}
+      ))} */}
     </div>
   );
 };

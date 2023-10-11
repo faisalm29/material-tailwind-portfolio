@@ -4,7 +4,7 @@ import EntryCard from "./EntryCard";
 const ArticleGallery = ({ articles }: { articles: Article[] }): JSX.Element => {
   return (
     <div className="mb-16 px-4 md:flex md:items-start md:justify-center md:gap-6">
-      {articles.map((article, id) => (
+      {/* {articles.map((article, id) => (
         <EntryCard
           key={id}
           title={article.title}
@@ -12,7 +12,7 @@ const ArticleGallery = ({ articles }: { articles: Article[] }): JSX.Element => {
           thumbnailUrl={article.thumbnail}
           slug={article.slug}
         />
-      ))}
+      ))} */}
     </div>
   );
 };

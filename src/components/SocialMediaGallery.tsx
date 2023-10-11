@@ -8,7 +8,7 @@ const SocialMediaGallery = ({
 }): JSX.Element => {
   return (
     <div className="mb-16 px-4 md:flex md:items-start md:justify-center md:gap-6">
-      {socialMedias.map((socialMedia, id) => (
+      {/* {socialMedias.map((socialMedia, id) => (
         <EntryCard
           key={id}
           title={socialMedia.title}
@@ -16,7 +16,7 @@ const SocialMediaGallery = ({
           thumbnailUrl={socialMedia.thumbnail}
           slug={socialMedia.slug}
         />
-      ))}
+      ))} */}
     </div>
   );
 };

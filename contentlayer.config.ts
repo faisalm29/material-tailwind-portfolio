@@ -29,7 +29,7 @@ const Images = defineNestedType(() => ({
   },
 }));
 
-const Article = defineDocumentType(() => ({
+export const Article = defineDocumentType(() => ({
   name: "Article",
   filePathPattern: "articles/*.mdx",
   contentType: "mdx",
@@ -42,7 +42,7 @@ const Article = defineDocumentType(() => ({
   computedFields,
 }));
 
-const Campaign = defineDocumentType(() => ({
+export const Campaign = defineDocumentType(() => ({
   name: "Campaign",
   filePathPattern: "campaigns/*.mdx",
   contentType: "mdx",
@@ -54,7 +54,7 @@ const Campaign = defineDocumentType(() => ({
   computedFields,
 }));
 
-const SocialMedia = defineDocumentType(() => ({
+export const SocialMedia = defineDocumentType(() => ({
   name: "SocialMedia",
   filePathPattern: "social-media/*.mdx",
   contentType: "mdx",

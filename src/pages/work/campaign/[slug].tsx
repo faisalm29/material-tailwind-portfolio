@@ -5,10 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs, Typography } from "@material-tailwind/react";
 
-const CampaignEntry: NextPage<
-  InferGetStaticPropsType<typeof getStaticProps>
-> = ({ campaign }): JSX.Element => {
-  const Component = useMDXComponent(campaign.body.code);
+const CampaignEntry = ({}): JSX.Element => {
+  // const Component = useMDXComponent(campaign.body.code);
 
   return (
     <>
@@ -33,12 +31,13 @@ const CampaignEntry: NextPage<
         </div>
 
         <Typography variant="h1" className="mb-6 text-center">
-          {campaign.title}
+          {/* {campaign.title} */}
+          title
         </Typography>
 
         {/* Image goes here */}
         <div className="mb-6">
-          <Image
+          {/* <Image
             src={campaign.thumbnail}
             alt={`${campaign.title} thumbnail`}
             width={0}
@@ -46,7 +45,7 @@ const CampaignEntry: NextPage<
             sizes="100vw"
             style={{ width: "100%", height: "auto" }}
             className="rounded-lg"
-          />
+          /> */}
           {/* <Image
             src={campaign.thumbnail}
             width={2000}
@@ -59,44 +58,45 @@ const CampaignEntry: NextPage<
         </div>
 
         <article className="post-wrapper prose mx-auto">
-          <Component />
+          {/* <Component /> */}
+          body text
         </article>
       </div>
     </>
   );
 };
 
-export const getStaticPaths = async () => {
-  return {
-    paths: allCampaigns.map((campaign) => ({
-      params: {
-        slug: campaign.slug,
-      },
-    })),
-    fallback: false,
-  };
-};
+// export const getStaticPaths = async () => {
+//   return {
+//     paths: allCampaigns.map((campaign) => ({
+//       params: {
+//         slug: campaign.slug,
+//       },
+//     })),
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps = async ({
-  params,
-}: {
-  params: { slug: string };
-}) => {
-  const campaign = allCampaigns.find(
-    (campaign) => campaign.slug === (params?.slug as string),
-  );
+// export const getStaticProps = async ({
+//   params,
+// }: {
+//   params: { slug: string };
+// }) => {
+//   const campaign = allCampaigns.find(
+//     (campaign) => campaign.slug === (params?.slug as string),
+//   );
 
-  if (!campaign) {
-    return {
-      notFound: true,
-    };
-  }
+//   if (!campaign) {
+//     return {
+//       notFound: true,
+//     };
+//   }
 
-  return {
-    props: {
-      campaign,
-    },
-  };
-};
+//   return {
+//     props: {
+//       campaign,
+//     },
+//   };
+// };
 
 export default CampaignEntry;

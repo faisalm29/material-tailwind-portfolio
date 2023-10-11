@@ -6,14 +6,10 @@ type ImagesProps = {
   alt: string;
 };
 
-const CarouselDefault = ({
-  images,
-}: {
-  images: Array<ImagesProps>;
-}): JSX.Element => {
+const CarouselDefault = (): JSX.Element => {
   return (
     <Carousel className="rounded-xl">
-      {images.map((image, id) => (
+      {/* {images.map((image, id) => (
         <Image
           key={id}
           src={image.url}
@@ -23,7 +19,7 @@ const CarouselDefault = ({
           sizes="100vw"
           style={{ width: "100%", height: "auto" }}
         />
-      ))}
+      ))} */}
     </Carousel>
   );
 };

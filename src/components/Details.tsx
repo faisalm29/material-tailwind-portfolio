@@ -5,16 +5,16 @@ type Detail = {
   description: string;
 };
 
-const Details = ({ details }: { details: Detail[] }): JSX.Element => {
+const Details = (): JSX.Element => {
   return (
     <div className="mb-6 md:flex md:items-start md:justify-center md:gap-4">
-      {details.map((detail, id) => (
+      {/* {details.map((detail, id) => (
         <AccordionAllOpen
           key={id}
           label={detail.label}
           description={detail.description}
         />
-      ))}
+      ))} */}
     </div>
   );
 };

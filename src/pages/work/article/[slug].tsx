@@ -6,10 +6,8 @@ import Link from "next/link";
 import Details from "@/components/Details";
 import { Typography, Breadcrumbs } from "@material-tailwind/react";
 
-const ArticleEntry: NextPage<
-  InferGetStaticPropsType<typeof getStaticProps>
-> = ({ article }): JSX.Element => {
-  const Component = useMDXComponent(article.body.code);
+const ArticleEntry = ({}): JSX.Element => {
+  // const Component = useMDXComponent(article.body.code);
 
   return (
     <>
@@ -34,14 +32,15 @@ const ArticleEntry: NextPage<
         </div>
 
         <Typography variant="h1" className="mb-6 text-center">
-          {article.title}
+          {/* {article.title} */}
+          title
         </Typography>
 
-        <Details details={article.details} />
+        {/* <Details details={article.details} /> */}
 
         {/* Image goes here */}
         <div className="mb-6">
-          <Image
+          {/* <Image
             src={article.thumbnail}
             alt={`${article.title} thumbnail`}
             width={0}
@@ -49,47 +48,48 @@ const ArticleEntry: NextPage<
             sizes="100vw"
             style={{ width: "100%", height: "auto" }}
             className="rounded-lg"
-          />
+          /> */}
         </div>
         <article className="prose mx-auto">
-          <Component />
+          {/* <Component /> */}
+          Body text
         </article>
       </div>
     </>
   );
 };
 
-export const getStaticPaths = async () => {
-  return {
-    paths: allArticles.map((article) => ({
-      params: {
-        slug: article.slug,
-      },
-    })),
-    fallback: false,
-  };
-};
+// export const getStaticPaths = async () => {
+//   return {
+//     paths: allArticles.map((article) => ({
+//       params: {
+//         slug: article.slug,
+//       },
+//     })),
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps = async ({
-  params,
-}: {
-  params: { slug: string };
-}) => {
-  const article = allArticles.find(
-    (article) => article.slug === (params?.slug as string),
-  );
+// export const getStaticProps = async ({
+//   params,
+// }: {
+//   params: { slug: string };
+// }) => {
+//   const article = allArticles.find(
+//     (article) => article.slug === (params?.slug as string),
+//   );
 
-  if (!article) {
-    return {
-      notFound: true,
-    };
-  }
+//   if (!article) {
+//     return {
+//       notFound: true,
+//     };
+//   }
 
-  return {
-    props: {
-      article,
-    },
-  };
-};
+//   return {
+//     props: {
+//       article,
+//     },
+//   };
+// };
 
 export default ArticleEntry;
