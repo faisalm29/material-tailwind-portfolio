@@ -7,11 +7,9 @@ import Layout from "@/components/Layout";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <Layout>
-      <ThemeProvider>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </Layout>
+    <ThemeProvider>
+      <Component {...pageProps} />
+    </ThemeProvider>
   );
 };
 

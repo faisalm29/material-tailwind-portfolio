@@ -34,9 +34,9 @@ const SocialMediaEntry: NextPage<
         </Typography>
       </div>
 
-      {/* <div className="mx-auto mb-16 max-w-[480px] px-4">
+      <div className="mx-auto mb-16 max-w-[480px] px-4">
         <CarouselDefault images={socialMedia.images} />
-      </div> */}
+      </div>
     </>
   );
 };

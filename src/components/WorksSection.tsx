@@ -24,7 +24,7 @@ const works = [
 const WorksSection = (): JSX.Element => {
   return (
     <section className="mx-auto mb-16 max-w-[960px] px-4">
-      {/* <main className="md: justify-center md:flex md:items-center md:gap-6">
+      <main className="md: justify-center md:flex md:items-center md:gap-6">
         {works.map((work, id) => (
           <WorkCard
             key={id}
@@ -34,7 +34,7 @@ const WorksSection = (): JSX.Element => {
             href={work.href}
           />
         ))}
-      </main> */}
+      </main>
     </section>
   );
 };
