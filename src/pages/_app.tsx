@@ -5,7 +5,7 @@ import { ThemeProvider } from "@material-tailwind/react";
 
 import Layout from "@/components/Layout";
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <Layout>
       <ThemeProvider>
@@ -13,4 +13,6 @@ export default function App({ Component, pageProps }: AppProps) {
       </ThemeProvider>
     </Layout>
   );
-}
+};
+
+export default App;
