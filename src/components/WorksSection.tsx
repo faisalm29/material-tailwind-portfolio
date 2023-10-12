@@ -3,7 +3,7 @@ import WorkCard from "@/components/WorkCard";
 const works = [
   {
     name: "Articles",
-    description: "Works description",
+    description: "Passionately create.",
     imgUrl: "/images/articles.jpg",
     href: "/work/article",
   },

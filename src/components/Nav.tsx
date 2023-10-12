@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import siteConfig from "@/config/site";
+import Link from "next/link";
 import { Navbar, Collapse, Button, IconButton } from "@material-tailwind/react";
 import NavList from "./NavList";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -25,9 +27,12 @@ const Nav = (): JSX.Element => {
           <div className="hidden lg:block">
             <NavList />
           </div>
-          <Button variant="filled" size="md">
-            Contact
-          </Button>
+          <Link href={`mailto:${siteConfig.contacts.email}`}>
+            <Button variant="filled" size="md">
+              Contact me
+            </Button>
+          </Link>
+
           <IconButton
             variant="text"
             ripple={false}

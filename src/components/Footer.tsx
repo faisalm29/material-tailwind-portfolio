@@ -1,3 +1,4 @@
+import siteConfig from "@/config/site";
 import { Typography } from "@material-tailwind/react";
 import { LinkedIn, Mail } from "./Icon";
 
@@ -15,10 +16,14 @@ const Footer = (): JSX.Element => {
             &copy; {currentYear} Faisal Muhammad. All Rights Reserved.
           </Typography>
           <div className="flex items-center justify-center gap-4 text-blue-gray-900 sm:justify-center">
-            <Typography as="a" href="mailto:faisal.muhammad2911@gmail.com">
+            <Typography as="a" href={`mailto:${siteConfig.contacts.email}`}>
               <Mail />
             </Typography>
-            <Typography as="a" href="/">
+            <Typography
+              as="a"
+              href={`https://www.linkedin.com/in/${siteConfig.contacts.linkedin}`}
+              target="_blank"
+            >
               <LinkedIn />
             </Typography>
           </div>

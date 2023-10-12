@@ -1,3 +1,5 @@
+import siteConfig from "@/config/site";
+import Link from "next/link";
 import { Avatar, Button, Typography } from "@material-tailwind/react";
 
 const ProfileSection = (): JSX.Element => {
@@ -12,18 +14,17 @@ const ProfileSection = (): JSX.Element => {
         />
       </div>
       <Typography variant="h1" className="mb-2 text-center">
-        Faisal Muhammad
+        {siteConfig.details.author}
       </Typography>
       <Typography variant="paragraph" className="mb-8 text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
-        eaque cupiditate! Fugiat possimus earum eligendi. Tempore a, ratione
-        ullam quod sint minus asperiores laborum aut optio quis nisi quae
-        dignissimos!
+        {siteConfig.details.introduction}
       </Typography>
       <div className="flex items-center justify-center">
-        <Button variant="filled" size="md">
-          Contact me
-        </Button>
+        <Link href={`mailto:${siteConfig.contacts.email}`}>
+          <Button variant="filled" size="md">
+            Contact me
+          </Button>
+        </Link>
       </div>
     </section>
   );

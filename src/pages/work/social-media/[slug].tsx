@@ -1,5 +1,7 @@
 import { allSocialMedia } from "contentlayer/generated";
+import siteConfig from "@/config/site";
 import { InferGetStaticPropsType, NextPage } from "next";
+import { NextSeo } from "next-seo";
 import Link from "next/link";
 import CarouselDefault from "@/components/CarouselDefault";
 import { Breadcrumbs, Typography } from "@material-tailwind/react";
@@ -9,6 +11,26 @@ const SocialMediaEntry: NextPage<
 > = ({ socialMedia }): JSX.Element => {
   return (
     <>
+      <NextSeo
+        title={`${socialMedia.title} | ${siteConfig.details.title}`}
+        description={socialMedia.description}
+        openGraph={{
+          url: siteConfig.details.url,
+          title: socialMedia.title,
+          description: socialMedia.description,
+          images: [
+            {
+              url: `${siteConfig.details.url}${socialMedia.thumbnail}`,
+              width: 2000,
+              height: 1000,
+              alt: socialMedia.title,
+            },
+          ],
+          siteName: siteConfig.details.title,
+          type: "article",
+          locale: "id_ID",
+        }}
+      />
       <div className="mx-auto mb-6 max-w-[960px] px-4">
         <div className="mb-4 flex items-center justify-center">
           <Breadcrumbs>

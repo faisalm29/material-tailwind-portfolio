@@ -1,5 +1,7 @@
 import { allArticles } from "contentlayer/generated";
+import siteConfig from "@/config/site";
 import { InferGetStaticPropsType, NextPage } from "next";
+import { NextSeo } from "next-seo";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Image from "next/legacy/image";
 import Link from "next/link";
@@ -13,6 +15,26 @@ const ArticleEntry: NextPage<
 
   return (
     <>
+      <NextSeo
+        title={`${article.title} | ${siteConfig.details.title}`}
+        description={article.excerpt}
+        openGraph={{
+          url: siteConfig.details.url,
+          title: article.title,
+          description: article.excerpt,
+          images: [
+            {
+              url: `${siteConfig.details.url}${article.thumbnail}`,
+              width: 2000,
+              height: 1000,
+              alt: article.title,
+            },
+          ],
+          siteName: siteConfig.details.title,
+          type: "article",
+          locale: "id_ID",
+        }}
+      />
       <div className="mx-auto mb-16 max-w-[960px] px-4">
         <div className="mb-4 flex items-center justify-center">
           <Breadcrumbs>

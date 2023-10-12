@@ -1,5 +1,7 @@
 import { allCampaigns } from "contentlayer/generated";
+import siteConfig from "@/config/site";
 import { InferGetStaticPropsType, NextPage } from "next";
+import { NextSeo } from "next-seo";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Image from "next/legacy/image";
 import Link from "next/link";
@@ -12,6 +14,26 @@ const CampaignEntry: NextPage<
 
   return (
     <>
+      <NextSeo
+        title={`${campaign.title} | ${siteConfig.details.title}`}
+        description={campaign.excerpt}
+        openGraph={{
+          url: siteConfig.details.url,
+          title: campaign.title,
+          description: campaign.excerpt,
+          images: [
+            {
+              url: `${siteConfig.details.url}${campaign.thumbnail}`,
+              width: 2000,
+              height: 1000,
+              alt: campaign.title,
+            },
+          ],
+          siteName: siteConfig.details.title,
+          type: "article",
+          locale: "id_ID",
+        }}
+      />
       <div className="mx-auto mb-16 max-w-[960px] px-4">
         <div className="mb-4 flex items-center justify-center">
           <Breadcrumbs>
