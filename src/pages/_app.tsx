@@ -23,8 +23,8 @@ export default function App({ Component, pageProps }: AppProps) {
           images: [
             {
               url: `${siteConfig.details.url}${siteConfig.assets.image}`,
-              width: 1012,
-              height: 506,
+              width: 1080,
+              height: 1080,
               alt: `${siteConfig.details.author} - ${siteConfig.details.description}`,
               type: "image/png",
             },
