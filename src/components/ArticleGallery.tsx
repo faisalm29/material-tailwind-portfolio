@@ -3,7 +3,7 @@ import EntryCard from "./EntryCard";
 
 const ArticleGallery = ({ articles }: { articles: Article[] }): JSX.Element => {
   return (
-    <div className="mb-16 px-4 md:flex md:items-start md:justify-center md:gap-6">
+    <div className="mx-auto mb-16 max-w-[960px] px-4 md:grid md:grid-cols-3 md:grid-rows-[auto] md:gap-6">
       {articles.map((article, id) => (
         <EntryCard
           key={id}

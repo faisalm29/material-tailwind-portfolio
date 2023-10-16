@@ -13,13 +13,13 @@ const computedFields: ComputedFields = {
   },
 };
 
-const Details = defineNestedType(() => ({
-  name: "Details",
-  fields: {
-    label: { type: "string", required: true },
-    description: { type: "string", required: true },
-  },
-}));
+// const Details = defineNestedType(() => ({
+//   name: "Details",
+//   fields: {
+//     label: { type: "string", required: true },
+//     description: { type: "string", required: true },
+//   },
+// }));
 
 const Images = defineNestedType(() => ({
   name: "Images",
@@ -36,7 +36,6 @@ const Article = defineDocumentType(() => ({
   fields: {
     title: { type: "string", required: true },
     excerpt: { type: "string", required: true },
-    details: { type: "list", of: Details, required: true },
     thumbnail: { type: "string", required: true },
   },
   computedFields,

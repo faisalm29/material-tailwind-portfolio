@@ -5,7 +5,6 @@ import { NextSeo } from "next-seo";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Image from "next/legacy/image";
 import Link from "next/link";
-import Details from "@/components/Details";
 import { Typography, Breadcrumbs } from "@material-tailwind/react";
 
 const ArticleEntry: NextPage<
@@ -58,8 +57,6 @@ const ArticleEntry: NextPage<
         <Typography variant="h1" className="mb-6 text-center">
           {article.title}
         </Typography>
-
-        <Details details={article.details} />
 
         {/* Image goes here */}
         <div className="mb-6">
