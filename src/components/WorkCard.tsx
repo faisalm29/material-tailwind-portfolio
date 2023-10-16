@@ -47,7 +47,7 @@ const WorkCard = ({
       </CardBody>
       <CardFooter className="pt-0">
         <Link href={href}>
-          <Button>Read More</Button>
+          <Button>See More</Button>
         </Link>
       </CardFooter>
     </Card>
