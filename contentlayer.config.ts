@@ -49,6 +49,7 @@ const Campaign = defineDocumentType(() => ({
     title: { type: "string", required: true },
     excerpt: { type: "string", required: true },
     thumbnail: { type: "string", required: true },
+    url: { type: "string", required: true },
   },
   computedFields,
 }));
