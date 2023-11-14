@@ -18,7 +18,7 @@ const works = [
     href: "/work/social-media",
   },
   {
-    name: "Campaign",
+    name: "Fundraising Campaign",
     description:
       "Fundraising campaigns for various purposes, from health to education.",
     imgUrl: "/images/fundraising-campaigns.jpg",
