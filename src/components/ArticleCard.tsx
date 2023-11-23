@@ -9,19 +9,19 @@ import {
   Button,
 } from "@material-tailwind/react";
 
-type WorkCardProps = {
+type ArticleCardProps = {
   name: string;
   description: string;
-  imageUrl: string;
+  imgUrl: string;
   href: string;
 };
 
-const WorkCard = ({
+const ArticleCard = ({
   name,
   description,
-  imageUrl,
+  imgUrl,
   href,
-}: WorkCardProps): JSX.Element => {
+}: ArticleCardProps): JSX.Element => {
   return (
     <Card className="mb-6 overflow-hidden md:mb-0 md:max-w-[24rem]">
       <CardHeader
@@ -31,7 +31,7 @@ const WorkCard = ({
         className="m-0 rounded-none"
       >
         <Image
-          src={imageUrl}
+          src={imgUrl}
           alt={name}
           width={0}
           height={0}
@@ -46,12 +46,12 @@ const WorkCard = ({
         <Typography>{description}</Typography>
       </CardBody>
       <CardFooter className="pt-0">
-        <Link href={href}>
-          <Button>{name === "Radio Script" ? "Download" : "See more"}</Button>
+        <Link href={href} target="_blank">
+          <Button>Read Articles</Button>
         </Link>
       </CardFooter>
     </Card>
   );
 };
 
-export default WorkCard;
+export default ArticleCard;

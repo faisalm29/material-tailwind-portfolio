@@ -13,7 +13,7 @@ const ArticleEntriesPage: NextPage<
         title={`Article | ${siteConfig.details.title}`}
         description="Passing work description from WorkCard component"
       />
-      <ArticleGallery articles={articles} />
+      <ArticleGallery />
     </>
   );
 };

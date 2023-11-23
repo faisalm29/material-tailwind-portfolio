@@ -24,6 +24,13 @@ const works = [
     imgUrl: "/images/fundraising-campaigns.jpg",
     href: "/work/campaign",
   },
+  {
+    name: "Radio Script",
+    description:
+      "The radio broadcast script that I wrote during my time as an assistant producer at B Radio Bandung.",
+    imgUrl: "/images/radio-broadcasting-script.jpg",
+    href: "https://drive.usercontent.google.com/download?id=1QuCwe_iV9-HGhMe2VnWWWgkie_Fu9QPu&export=download&authuser=0&confirm=t&uuid=926de1cb-a935-44f4-b203-e9ed8708f624&at=APZUnTVfhGX3EPNfdxTxoWRWhlcj:1700727244670",
+  },
 ];
 
 const WorksSection = (): JSX.Element => {
