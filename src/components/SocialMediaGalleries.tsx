@@ -1,8 +1,8 @@
-import EntryCard from "./EntryCard";
+import SocialMediaCard from "./SocialMediaCard";
 import { Typography } from "@material-tailwind/react";
 import type { SocialMedia } from "contentlayer/generated";
 
-const SocialMediaGallery = ({
+const SocialMediaGalleries = ({
   socialMedias,
 }: {
   socialMedias: SocialMedia[];
@@ -13,18 +13,21 @@ const SocialMediaGallery = ({
         Social Media
       </Typography>
       <div className="md:grid md:grid-cols-3 md:grid-rows-[auto] md:gap-6">
-        {/* {socialMedias.map((socialMedia, id) => (
-          <EntryCard
+        {socialMedias.map((socialMedia, id) => (
+          <SocialMediaCard
             key={id}
             title={socialMedia.title}
-            excerpt={socialMedia.description}
-            thumbnailUrl={socialMedia.thumbnail}
-            slug={socialMedia.slug}
+            company={socialMedia.company}
+            companyLogo={socialMedia.companyLogo}
+            publishedOn={socialMedia.publishedOn}
+            publishedAt={socialMedia.publishedAt}
+            description={socialMedia.description}
+            url={socialMedia.url}
           />
-        ))} */}
+        ))}
       </div>
     </div>
   );
 };
 
-export default SocialMediaGallery;
+export default SocialMediaGalleries;

@@ -54,15 +54,31 @@ const Campaign = defineDocumentType(() => ({
   computedFields,
 }));
 
+// const SocialMedia = defineDocumentType(() => ({
+//   name: "SocialMedia",
+//   filePathPattern: "social-media/*.mdx",
+//   contentType: "mdx",
+//   fields: {
+//     title: { type: "string", required: true },
+//     images: { type: "list", of: Images, required: true },
+//     description: { type: "string", required: true },
+//     thumbnail: { type: "string", required: true },
+//   },
+//   computedFields,
+// }));
+
 const SocialMedia = defineDocumentType(() => ({
   name: "SocialMedia",
   filePathPattern: "social-media/*.mdx",
   contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
-    images: { type: "list", of: Images, required: true },
+    company: { type: "string", required: true },
+    companyLogo: { type: "string", required: true },
+    publishedOn: { type: "string", required: true },
+    publishedAt: { type: "date", required: true },
     description: { type: "string", required: true },
-    thumbnail: { type: "string", required: true },
+    url: { type: "string", required: true },
   },
   computedFields,
 }));

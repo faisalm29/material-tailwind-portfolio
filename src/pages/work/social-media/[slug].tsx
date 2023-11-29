@@ -11,7 +11,7 @@ const SocialMediaEntry: NextPage<
 > = ({ socialMedia }): JSX.Element => {
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title={`${socialMedia.title} | ${siteConfig.details.title}`}
         description={socialMedia.description}
         openGraph={{
@@ -30,7 +30,7 @@ const SocialMediaEntry: NextPage<
           type: "article",
           locale: "id_ID",
         }}
-      />
+      /> */}
       <div className="mx-auto mb-6 max-w-[960px] px-4">
         <div className="mb-4 flex items-center justify-center">
           <Breadcrumbs>
@@ -57,7 +57,7 @@ const SocialMediaEntry: NextPage<
       </div>
 
       <div className="mx-auto mb-16 max-w-[480px] px-4">
-        <CarouselDefault images={socialMedia.images} />
+        {/* <CarouselDefault images={socialMedia.images} /> */}
       </div>
     </>
   );

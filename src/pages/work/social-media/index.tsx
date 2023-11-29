@@ -1,8 +1,9 @@
-import { allSocialMedia } from "contentlayer/generated";
+import { allSocialMedia, type SocialMedia } from "contentlayer/generated";
+import { compareDesc } from "date-fns";
 import siteConfig from "@/config/site";
 import { NextSeo } from "next-seo";
 import { InferGetStaticPropsType, NextPage } from "next/types";
-import SocialMediaGallery from "@/components/SocialMediaGallery";
+import SocialMediaGalleries from "@/components/SocialMediaGalleries";
 
 const SocialMediaEntriesPage: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
@@ -13,15 +14,19 @@ const SocialMediaEntriesPage: NextPage<
         title={`Social Media | ${siteConfig.details.title}`}
         description="Passing work description from WorkCard component"
       />
-      <SocialMediaGallery socialMedias={socialMedias} />
+      <SocialMediaGalleries socialMedias={socialMedias} />
     </>
   );
 };
 
 export const getStaticProps = async () => {
+  const socialMedias: SocialMedia[] = allSocialMedia.sort((a, b) => {
+    return compareDesc(new Date(a.publishedAt), new Date(b.publishedAt));
+  });
+
   return {
     props: {
-      socialMedias: allSocialMedia,
+      socialMedias,
     },
   };
 };
