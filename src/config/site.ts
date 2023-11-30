@@ -2,7 +2,7 @@ const siteConfig = {
   details: {
     title: "Faisal Muhammad",
     introduction:
-      "Self-motivated content writer with over 6 months of experience working in public sectors. Eager to learn new things and actively seeking new opportunities. Graduated from Padjadjaran University with 3.63 GPA.",
+      "Experienced Content Writer with a demonstrated history of working in the information technology and services industry. Successfully wrote 90+ fundraising campaigns that collectively raised over Rp1.800.000.000+ as a Freelance Content Writer for Insan Bumi Mandiri Foundation. Skilled in writing, research, community service, and communication.",
     author: "Faisal Muhammad",
     description: "A Writing Portfolio",
     url: "https://faisal-writing-portfolio.vercel.app",

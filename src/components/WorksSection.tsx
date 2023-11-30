@@ -6,7 +6,7 @@ const works = [
   {
     name: "Article",
     description:
-      "Passionately created articles on various themes such as psychology, productivity, and popular culture, backed by scientific research.",
+      "Passionately created and carefully researched articles on various themes such as psychology, productivity, popular culture, health, and community empowerment.",
     imgUrl: "/images/articles.jpg",
     href: "/work/article",
   },
