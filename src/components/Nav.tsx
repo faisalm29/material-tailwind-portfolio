@@ -27,7 +27,7 @@ const Nav = (): JSX.Element => {
           <div className="hidden lg:block">
             <NavList />
           </div>
-          <Link href="https://drive.usercontent.google.com/download?id=1lpXupIgZ9eEwc9yiEe2YQY81m6mnFidh&export=download&authuser=0&confirm=t&uuid=2b4816ed-ff30-49c1-a786-af26257f017d&at=APZUnTVIHRAtPR_Jm695ztE-1Kqt:1700727211630">
+          <Link href="https://drive.usercontent.google.com/download?id=11c7HmmsvCJrlB654gjoVfZ7ddeMm63VA&export=download&authuser=0&confirm=t&uuid=1aa431ff-2594-4199-92dd-d507ccfa71a8&at=APZUnTVUKI2JOe2e8M4qDFsy8Q9V:1701413012096">
             <Button variant="filled" size="md">
               Download Resume
             </Button>
