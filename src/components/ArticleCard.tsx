@@ -47,7 +47,7 @@ const ArticleCard = ({
       </CardBody>
       <CardFooter className="pt-0">
         <Link href={href} target="_blank">
-          <Button>Read Articles</Button>
+          <Button>See Articles</Button>
         </Link>
       </CardFooter>
     </Card>

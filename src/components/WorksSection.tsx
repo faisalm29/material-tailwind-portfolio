@@ -13,7 +13,7 @@ const works = [
   {
     name: "Social Media",
     description:
-      "Some of the social media content that I write is both entertainment and educational.",
+      "Social media content that I have written with the aim of increasing awareness of the inland areas of Indonesia, sharing insights, or just entertainment.",
     imgUrl: "/images/social-media-copies.jpg",
     href: "/work/social-media",
   },
